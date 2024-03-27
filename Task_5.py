@@ -6,6 +6,8 @@ speeds = []
 
 for i in range(num_of_cars):
     speed = int(input())
+    while speed > 300 or speed < 1:
+        speed = int(input())
     speeds.append(speed)
 
 faster_than_60 = "Yes" if max(speeds) > 60 else "No"
